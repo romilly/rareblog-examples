@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
+from typing import Tuple
 
 
 def hsv_to_rgb(h: float, s: float, v: float):
@@ -48,10 +49,24 @@ class Pen:
     b: int
 
 class Display(ABC):
+    def __init__(self):
+        self._pen = None
+
     @abstractmethod
     def create_pen(self, r: int, g: int, b: int) -> Pen:
         pass
 
     def create_pen_hsv(self, h: float, s: float, v: float) -> Pen:
         return Pen(*hsv_to_rgb(h, s, v))
+
+    def set_pen(self, pen: Pen):
+        self._pen = pen
+
+    @abstractmethod
+    def get_bounds(self) -> Tuple[int, int]:
+        pass
+
+    @abstractmethod
+    def get_pixel(self, x: int, y: int) -> Pen:
+        pass
 

@@ -17,4 +17,4 @@ I'm using Alistair Cockburn's [hexagonal architecture](https://en.wikipedia.org/
 
 There will be adapters for testing, for guizero, and for a variety of OLED and TFT displays that the Pico can drive.
 
-The Display interface borrows heavily from Pimoroni's PicoGraphics, so it should be easy to use this package with products like the Pimoroni Pico Explorer, mono OLED, GFX pack and friends.
+The Display interface borrows heavily from Pimoroni's [Micropyhon PicoGraphics Library](https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/modules/picographics), so it should be easy to use this package with products like the Pimoroni Pico Explorer, mono OLED, GFX pack and friends.

@@ -32,4 +32,11 @@ def test_knows_its_pixels(display):
     assert display.get_pixel(0, 0) == Pen(0, 0 ,0)
     assert display.get_pixel(479, 319) == Pen(0, 0 ,0)
 
+def test_can_set_pixel(display):
+    pen = display.create_pen(0, 128, 255)
+    display.set_pen(pen)
+    display.pixel(7, 9)
+    assert display.get_pixel(0, 0) == Pen(0, 0 ,0)
+    assert display.get_pixel(7, 9) == Pen(0, 128 ,255)
+
 

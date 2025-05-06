@@ -19,3 +19,6 @@ class BytesBasedMockDisplay(Display):
 
     def get_pixel(self, x: int, y: int) -> Pen:
         return self._pixels[x, y]
+
+    def pixel(self, x: int, y: int) -> None:
+        self._pixels[x, y] = self._pen

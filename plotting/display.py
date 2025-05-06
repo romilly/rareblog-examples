@@ -70,3 +70,7 @@ class Display(ABC):
     def get_pixel(self, x: int, y: int) -> Pen:
         pass
 
+    @abstractmethod
+    def pixel(self, x: int, y: int) -> None:
+        pass
+

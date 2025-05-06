@@ -2,6 +2,8 @@
 
 This repository will contain code examples for the projects covered described in the new [RAREblog](https://rareblog.substack.com).
 
+The code is MIT licensed.
+
 The first project will have code for creating simple plots on the Raspberry Pi Pico and Pico 2.
 
 I'll be showing my work as I go.

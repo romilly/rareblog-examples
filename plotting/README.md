@@ -17,7 +17,7 @@ also known as ports and adapters architecture.
 The abstract Display class defines the interface to adapters.
 
 The Display interface borrows heavily from Pimoroni's [Micropyhon PicoGraphics Library](https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/modules/picographics),
-so it should be easy to use this package with products like the Pimoroni Pico Explorer, mono OLED, GFX pack and friends.
+so it should be easy to use this code with products like the Pimoroni Pico Explorer, mono OLED, GFX pack and friends.
 
 There will be adapters for testing, for guizero, and for several of the OLED and TFT displays that the Pico can drive.
 

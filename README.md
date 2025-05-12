@@ -4,6 +4,7 @@ This repository will contain code examples for the projects covered described in
 
 The code is MIT licensed.
 
-The first project plots the applied voltage and current for an LED. Details are in the `led_plot` directory.
+The first project plots the load resistor vs current for a red LED. Details are in the `led_plot` directory.
 
-The second project will contain more general code for creating simple plots on the Raspberry Pi Pico and Pico 2.
+Here's 
+

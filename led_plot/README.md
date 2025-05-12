@@ -6,30 +6,34 @@ This directory contains code for measuring and analysing the voltage-current cha
 ## Hardware Setup
 The experiment uses:
 - Raspberry Pi Pico, Pico W or Pico 2 with MicroPython
-- PWM output (GPIO15) to control voltage
-- Two ADC channels for voltage measurements
-- A 100 ohm current-limiting resistor
+- A ULN2308A IC
+- A Grove 1.22" monochrome OLED display
+- A set of load resistors
+- Jump wires, including a GROVE connector
+- A red LED
+- Two breadboards.
 
-![Breadboard](img/led-board.jpg)
+![Breadboard](img/darlington_bb.png)
+
+Here's the schematic:
+
+![Schematic](img/darlington_schem.png)
 
 ## Files
-- `pmw.py` - Main script for LED testing that:
-    - Configures PWM output for voltage control
+- `darlington_loads.py` - Main script for LED testing that:
     - Sets up ADC inputs for measurement
-    - Sweeps through voltage levels (1.0V to 3.3V)
-    - Measures voltage across the LED and resistor
-    - Calculates current at each voltage level
+    - Measures current though the LED for 8 load resistor values
     - Outputs data suitable for plotting LED characteristics
+- `plotter.py` - the plot routine
+- `sh1107.py` - the low-level drivet for the OLED display.
 
 ## Usage
-Run the script on a Raspberry Pi Pico with the proper circuit connections.
 
-![Ouptput](img/led-output.png)
+Run the script on a Raspberry Pi Pico, Pico W or Pico 2 with the wiring shown above.
 
-The output provides voltage and current measurements that can be used to plot the LED's I-V curve,
-allowing analysis of forward voltage drop and other characteristics.
+![Ouptput](img/led_volts_x_mA.jpg)
 
-![Output](img/curve_plot.png)
 
 ## More information
+
 This code is part of a project which will be published on the [RAREblog stack](https://rareblog.substack.com).

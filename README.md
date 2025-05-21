@@ -6,5 +6,5 @@ The code is MIT licensed.
 
 The first project plots the load resistor vs current for a red LED. Details are in the `led_plot` directory.
 
-Here's 
+
 
